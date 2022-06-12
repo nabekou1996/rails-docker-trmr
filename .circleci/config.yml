@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/rails-docker-trmr/src
     steps:
       - checkout:
-        path: ~/rails-docker-trmr
+          path: ~/rails-docker-trmr
       - ruby/install-deps
 
   test:
@@ -43,5 +43,5 @@ workflows:
     jobs:
       - build
       - test:
-        requires:
-          - build
+          requires:
+            - build
